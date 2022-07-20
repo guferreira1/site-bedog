@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Bedog Moda Pet</title>
+</head>
+
+<body>
+    <header class="header">
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/bedog/logo.png" alt="logo bedog" class="foto-logo">
+                </a>
+            </div>
+            <nav>
+                <div class="links-all">
+                    <a href="#" class="todos">Todos</a>
+                    <a href="#" class="links" id="peitoral">Peitoral</a>
+                    <a href="#" class="links" id="camisetas">Camisetas</a>
+                    <a href="#" class="links" id="blusas">Blusas</a>
+                </div>
+            </nav>
+    </header>
+    <main class="lista-produtos">
+            <section class="vitrine-itens">
+                <ul class="vitrine"></ul>
+            </section>
+            <section class="carrinho-itens">
+                <div class="container-carrinho">
+                    <form class="pesquisa-itens">
+                        <input class= "pesquisa-input" type="text" placeholder="Pesquisar itens, marcas ...">
+                        <button class="pesquisa-button" type="submit">Pesquisar</button>
+                    </form>
+                    <div class="carrinho-geral">
+                        <div class="carrinho-compras">
+                            <h2>Carrinho de compras</h2>
+                        </div>
+                        <div class="carrinho-itens-selecionados">
+                            <ul class="lista-carrinho"></ul>
+                        </div>
+                        <div class="somaItensEValor">
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <footer class="footer">
+        <p class="descricao-footer">Nos acompanhe nas redes sociais</p>
+        <a href="https://www.instagram.com/bedogmodapet/" target="_blank">
+            <img class="logo-footer" src="./img/icone-do-instagram-de-logotipo-moderno-em-fundo-branco_578229-126.webp" alt="">
+        </a>
+    </footer>
+    <script src="./js/database.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
