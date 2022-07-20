@@ -198,8 +198,6 @@ header {
 
 .pesquisa-itens {
     display: flex;
-    width: 246px;
-    height: 45px;
     margin-top: 20px;
     
     border: 1px solid #F2C9C9;
@@ -287,12 +285,6 @@ header {
     line-height: 24px;
 }
 
-.valor-total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
 
 .preco {
     color: #FFFFFF;
@@ -302,6 +294,10 @@ header {
 }
 
 .valor-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
@@ -370,6 +366,7 @@ header {
     color: #2E245E;
     text-decoration-line: underline;
 }
+
 
 .botao-finalizar {
     width: 319px;

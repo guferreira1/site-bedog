@@ -32,7 +32,7 @@ function criarVitrine(array){
     productsCategory.innerText = array[i].tag
     productsName.innerText = array[i].nameItem
     productsDescription.innerText = array[i].description
-    productsPrice.innerText = `R$ ${array[i].value.toString().replace('.', ',')}`
+    productsPrice.innerText = `R$ ${array[i].value.toFixed(2).toString().replace('.',',')}`
     productsButton.innerText = array[i].addCart
         
     let id = produtos[i].id
@@ -51,11 +51,13 @@ const todos = document.querySelector('.todos')
 const peitoral = document.querySelector('#peitoral')
 const camisetas = document.querySelector('#camisetas')
 const blusas = document.querySelector('#blusas')
+const logoReturn = document.querySelector('.logo-return')
 
 todos.addEventListener('click', filtroTodos)
 peitoral.addEventListener('click', filtroPeitoral)
 camisetas.addEventListener('click', filtroCamisetas)
 blusas.addEventListener('click', filtroBlusas)
+logoReturn.addEventListener('click', filtroTodos)
 
 
 function filtro(array, tag){
@@ -73,6 +75,7 @@ function filtroTodos(){
     vitrine.innerHTML = ''
     criarVitrine(produtos)
 }
+
 
 function filtroPeitoral(){
     vitrine.innerHTML = ''
@@ -116,9 +119,8 @@ function busca(valorPesquisa){
         let nomeProduto = produtos[i].nameItem.toLowerCase().trim()
         let categoriaProduto = produtos[i].tag[0].toLowerCase().trim()
         
-        if(valorPesquisa === nomeProduto || valorPesquisa === categoriaProduto){
+        if(nomeProduto.includes(valorPesquisa) || categoriaProduto.includes(valorPesquisa)){
        
-           
             pesquisaItens.value = ''
             pesquisaItens.focus()
             resultBusca.push(produtos[i])
@@ -126,6 +128,7 @@ function busca(valorPesquisa){
         } 
    
     }
+    
     if(resultBusca.length == 0){
         vitrine.innerHTML = produtoNaoEncontrado
                 
@@ -133,6 +136,7 @@ function busca(valorPesquisa){
         pesquisaItens.focus()
         return 
     }
+    
     return resultBusca
     
 }
@@ -220,14 +224,13 @@ function criarCardCarrinho(carrinho){
 
         imgCarrinho.src = imgProduto
         nomeCarrinho.innerText = nome
-        priceCarrinho.innerText = `R$ ${value.toString().replace('.', ',')}`
+        priceCarrinho.innerText = `R$ ${value.toFixed(2).toString().replace('.',',')}`
         buttonCarrinho.innerText = 'Remover produto'
 
         divImgCarrinho.appendChild(imgCarrinho)
         divCarrinho.append(nomeCarrinho, priceCarrinho, buttonCarrinho)
         listCarrinho.append(divImgCarrinho, divCarrinho)
         carrinhoDeCompras.appendChild(listCarrinho)
-
     }
     
 }

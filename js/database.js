@@ -6,7 +6,7 @@ const produtos = [
     img: "./img/bedog/AUMOR NO CASACO.png",
     nameItem: "Aumor no Casaco",
     description:
-      "Moletom aumor no casado para seu pet ficar em grande estilo...",
+      "Moletom aumor para seu pet ficar em grande estilo...",
     value: 59.99,
     addCart: "Adicionar ao carrinho",
     tag: ["Blusas"],
